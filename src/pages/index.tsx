@@ -1,35 +1,33 @@
 
 import React from "react"
+import Head from 'next/head'
 import { CompleteChallenges } from "../components/CompleteChallenges"
 import { Countdown } from "../components/Countdown"
 import { ExperienceBar } from "../components/ExperienceBar"
-import { StartChallenge } from "../components/StartChallenge"
+import { ChallengeBox } from "../components/ChallengeBox"
 import {Profile } from "../components/Profile"
 import styles from '../styles/pages/Home.module.css'
-import Head from 'next/head'
 
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <ExperienceBar/>
       <Head>
-        <title>Inicio | move.It</title>
+        <title>Inicio  | move.it</title>
       </Head>
+      
+      <ExperienceBar/>
+        
       <section>
-        <div className={styles.container}>
+        <div>
           <Profile/>
           <CompleteChallenges/>
           <Countdown/>
         </div>
-          <StartChallenge/>
         <div>
-
+         <ChallengeBox/>
         </div>
       </section> 
-
-      
     </div>
-    
   )
 } 
